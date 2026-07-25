@@ -8,7 +8,7 @@ This project establishes a proof-of-concept for remotely controlling a Texas Ins
 
 Build a working RSTD setup where:
 
-* A radar laptop runs mmWave Studio with RSTD enabled and a connected xWR68xx + DCA1000 EVM
+* A radar laptop runs mmWave Studio with RSTD enabled and a connected xWR68xx + DCA1000EVM
 * A master machine connects over the network and executes a complete radar capture cycle programmatically: configuring the radar, starting a capture, and collecting the resulting UDP data packets (all without touching the GUI)
 
 Captured data is forwarded via UDP packets and stored in a .bin file, which is later uploaded to MinIO for downstream processing. This architecture is designed to extend naturally to multiple simultaneous radars.
