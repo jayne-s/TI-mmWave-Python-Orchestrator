@@ -1,4 +1,3 @@
-from scapy.all import sniff, UDP
 from dotenv import load_dotenv
 from datetime import datetime 
 from minio import Minio
@@ -12,8 +11,7 @@ client = Minio(
   secret_key=os.getenv("MINIO_ROOT_PASSWORD"),
   secure=False
 ) 
-capture_filename = 'C:\\ti\\mmwave_studio_02_01_01_00\\mmWaveStudio\\PostProc\\adc_data.bin'
-
+capture_filename = os.getenv("CAPTURE_FILENAME")
 print(f"Checking Connection: {client.bucket_exists("radar-data")}")
 
 print(f"Ready to Upload: {capture_filename}")
