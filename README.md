@@ -26,22 +26,23 @@ b) Client Setup
 
 
 * Update ```.env``` file
-* ```dotnet new console -n RadarRemote``` & add files in RadarRemote folde
+* ```dotnet new console -n RadarRemote``` & add files in RadarRemote folder
 * Adjust IP Address in Program.cs & Adjust Path to upload_adc.py in radar_control.py
 
 c) Host Setup
 
 * Run ```pip install -r requirements.txt```
-* Run ```powershell -ExecutionPolicy Bypass -File .\scripts\setup.ps1``` in Windows Powershell Administrator Mode
+* Run ```powershell -ExecutionPolicy Bypass -File .\scripts\setup.ps1``` in Windows PowerShell Administrator Mode
 * Update ```.env``` file
 
 d) MinIO Setup on Host Machine
 
-* Method 1:
-  * Run ```powershell -ExecutionPolicy Bypass -File .\scripts\install-minio.ps1``` in Windows Powershell Administrator Mode
-  * Run ```powershell -ExecutionPolicy Bypass -File .\scripts\start-minio.ps1``` in Windows Powershell Administrator Mode
-* Method 2:
-  * Run ```docker compose up -d```
+ * Method 1:
+   * Run ```powershell -ExecutionPolicy Bypass -File .\scripts\install-minio.ps1``` in Windows PowerShell Administrator Mode
+   * Run ```powershell -ExecutionPolicy Bypass -File .\scripts\start-minio.ps1``` in Windows PowerShell Administrator Mode
+ * Method 2:
+   * Run ```docker compose up -d```
+     
 * Create a bucket using the MinIO GUI
 
 ## Usage
