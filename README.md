@@ -18,14 +18,19 @@ Captured data is forwarded via UDP packets and stored in a .bin file using the b
 a) Client Setup
 
 * Run ```pip install -r requirements.txt```
+* Update ```.env``` file
+
+  
 * Install [.NET 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 * ```dotnet new console -n RadarRemote``` & add files in RadarRemote folder
 * Adjust IP Address in Program.cs & Adjust Path to upload_adc.py in radar_control.py
-* Create .env file with HOSTNAME, USERNAME, PASSWORD variables
+
 
 b) Host Setup
 
 * Run ```pip install -r requirements.txt```
+
+  
 * Install [Docker Desktop for Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
 * Create .env file with MINIO_ROOT_USER, MINIO_ROOT_PASSWORD, DEVICE_ID, IP variables
 * Docker Commands: ```docker compose up -d``` and ```docker compose stop```
