@@ -29,18 +29,17 @@ b) Client Setup
 * ```dotnet new console -n RadarRemote``` & add files in RadarRemote folde
 * Adjust IP Address in Program.cs & Adjust Path to upload_adc.py in radar_control.py
 
-
 c) Host Setup
 
 * Run ```pip install -r requirements.txt```
-* Create bucket called ```radar-data``` using [MinIO GUI](http://localhost:9001)
 * Run ```powershell -ExecutionPolicy Bypass -File .\setup.ps1``` in Windows Powershell Administrator Mode
-
-
-
 * Update ```.env``` file
-* Install [Docker Desktop for Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
-* Docker Commands: ```docker compose up -d``` and ```docker compose stop```
+
+d) MinIO Setup on Host Machine
+
+* Run ```powershell -ExecutionPolicy Bypass -File .\install-minio.ps1``` in Windows Powershell Administrator Mode
+* Run ```powershell -ExecutionPolicy Bypass -File .\start-minio.ps1``` in Windows Powershell Administrator Mode
+* Create bucket called ```radar-data``` using MinIO GUI
 
 ## Usage
 
