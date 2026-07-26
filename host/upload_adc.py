@@ -20,7 +20,7 @@ try:
       folder = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
       
       client.fput_object(
-        bucket_name="radar-data",
+        bucket_name=os.getenv("BUCKET_NAME"),
         object_name=f"{DEVICE_ID}/{folder}/capture.bin",
         file_path=capture_filename
       )
