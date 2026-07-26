@@ -11,7 +11,7 @@ Build a working RSTD setup where:
 * A radar laptop runs mmWave Studio with RSTD enabled and a connected xWR68xx + DCA1000EVM
 * A master machine connects over the network and executes a complete radar capture cycle programmatically: configuring the radar, starting a capture, and collecting the resulting UDP data packets (all without touching the GUI)
 
-Captured data is forwarded via UDP packets and stored in a .bin file, which is later uploaded to MinIO for downstream processing. MinIO is an open-source object storage system that is private and self-hosted, allowing users to store large amounts of unstructured data on their own hardware. It also has a built-in web GUI for viewing, managing, and downloading files. This architecture is designed to extend naturally to multiple simultaneous radars.
+Captured data is forwarded via UDP packets and stored in a .bin file using the built-in Radar API, which is later uploaded to MinIO for downstream processing. MinIO is an open-source object storage system that is private and self-hosted, allowing users to store large amounts of unstructured data on their own hardware. It also has a built-in web GUI for viewing, managing, and downloading files. This architecture is designed to extend naturally to multiple simultaneous radars.
 
 ## Installation
 
