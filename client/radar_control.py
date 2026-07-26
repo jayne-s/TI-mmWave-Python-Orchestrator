@@ -19,7 +19,7 @@ subprocess.run([
 print("Capture Complete!")
 
 stdin, stdout, stderr = ssh.exec_command(
-    'python C:\\path\\to\\upload_adc.py' # change to host's path to upload_adc.py
+    'python C:\\TI-mmWave-Python-Orchestrator\\host\\upload_adc.py'
 )
 
 print("DONE!")
