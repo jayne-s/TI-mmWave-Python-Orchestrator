@@ -15,8 +15,7 @@ Captured data is forwarded via UDP packets and stored in a .bin file using the b
 
 ## Installation
 
-Clone repository on host and client devices:
-```git clone   ```
+Clone repository on host and client devices: ```git clone https://github.com/jayne-s/TI-mmWave-Python-Orchestrator.git```
 
 a) Client Setup
 
@@ -32,10 +31,10 @@ a) Client Setup
 b) Host Setup
 
 * Run ```pip install -r requirements.txt```
+* Update ```.env``` file
 
   
 * Install [Docker Desktop for Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
-* Create .env file with MINIO_ROOT_USER, MINIO_ROOT_PASSWORD, DEVICE_ID, IP variables
 * Docker Commands: ```docker compose up -d``` and ```docker compose stop```
 * Create bucket called 'radar-data' using MinIO GUI (MinIO URL: ```http://localhost:9001```)
 * Use Windows Defender Firewall to create Inbound Rules for Ports 22 (SSH) and 2777 (RSTD)
