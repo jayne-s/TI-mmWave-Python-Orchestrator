@@ -37,12 +37,11 @@ c) Host Setup
 
 d) MinIO Setup on Host Machine
 
- * Method 1:
+* Method 1:
    * Run ```powershell -ExecutionPolicy Bypass -File .\scripts\install-minio.ps1``` in Windows PowerShell Administrator Mode
    * Run ```powershell -ExecutionPolicy Bypass -File .\scripts\start-minio.ps1``` in Windows PowerShell Administrator Mode
- * Method 2:
+* Method 2:
    * Run ```docker compose up -d```
-     
 * Create a bucket using the MinIO GUI
 
 ## Usage
