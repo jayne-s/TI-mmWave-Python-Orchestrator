@@ -17,19 +17,19 @@ Captured data is forwarded via UDP packets and stored in a .bin file using the b
 
 a) Client Setup
 
-* Install [.NET 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 * Run ```pip install -r requirements.txt```
+* Install [.NET 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 * ```dotnet new console -n RadarRemote``` & add files in RadarRemote folder
 * Adjust IP Address in Program.cs & Adjust Path to upload_adc.py in radar_control.py
 * Create .env file with HOSTNAME, USERNAME, PASSWORD variables
 
 b) Host Setup
 
+* Run ```pip install -r requirements.txt```
 * Install [Docker Desktop for Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
 * Create .env file with MINIO_ROOT_USER, MINIO_ROOT_PASSWORD, DEVICE_ID, IP variables
 * Docker Commands: ```docker compose up -d``` and ```docker compose stop```
 * Create bucket called 'radar-data' using MinIO GUI (MinIO URL: ```http://localhost:9001```)
-* Run ```pip install -r requirements.txt```
 * Use Windows Defender Firewall to create Inbound Rules for Ports 22 (SSH) and 2777 (RSTD)
 * Install OpenSSH Server via Windows PowerShell (Run as Admin):
   ```
