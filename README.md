@@ -15,7 +15,8 @@ Captured data is forwarded via UDP packets and stored in a .bin file using the b
 
 ## Installation
 
-Clone repository on host and client devices: ```git clone https://github.com/jayne-s/TI-mmWave-Python-Orchestrator.git```
+Clone repository on host and client devices: 
+```git clone https://github.com/jayne-s/TI-mmWave-Python-Orchestrator.git```
 
 a) Client Setup
 
