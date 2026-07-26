@@ -15,6 +15,9 @@ Captured data is forwarded via UDP packets and stored in a .bin file using the b
 
 ## Installation
 
+Clone repository on host and client devices:
+```git clone   ```
+
 a) Client Setup
 
 * Run ```pip install -r requirements.txt```
