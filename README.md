@@ -26,29 +26,21 @@ b) Client Setup
 
 
 * Update ```.env``` file
-* ```dotnet new console -n RadarRemote``` & add files in RadarRemote folder
+* ```dotnet new console -n RadarRemote``` & add files in RadarRemote folde
 * Adjust IP Address in Program.cs & Adjust Path to upload_adc.py in radar_control.py
 
 
 c) Host Setup
 
 * Run ```pip install -r requirements.txt```
-* Use Windows Defender Firewall to create Inbound Rules for Ports 22 (SSH) and 2777 (RSTD)
 * Create bucket called ```radar-data``` using [MinIO GUI](http://localhost:9001)
-* Run ```powershell -ExecutionPolicy Bypass -File .\setup-ssh.ps1```
+* Run ```powershell -ExecutionPolicy Bypass -File .\setup.ps1``` in Windows Powershell Administrator Mode
+
+
 
 * Update ```.env``` file
 * Install [Docker Desktop for Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
 * Docker Commands: ```docker compose up -d``` and ```docker compose stop```
-
-* Install OpenSSH Server via Windows PowerShell (Run as Admin):
-  ```
-  a) Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
-  b) Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH.Server*' (to verify installation)
-  c) Start-Service sshd
-  d) Set-Service -Name sshd -StartupType Automatic (to enable on boot)
-  e) Get-NetFirewallRule -Name *SSH* (to verify whether windows firewall allows it)
-  ```
 
 ## Usage
 
