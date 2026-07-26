@@ -32,13 +32,13 @@ b) Client Setup
 c) Host Setup
 
 * Run ```pip install -r requirements.txt```
-* Run ```powershell -ExecutionPolicy Bypass -File .\setup.ps1``` in Windows Powershell Administrator Mode
+* Run ```powershell -ExecutionPolicy Bypass -File .\scripts\setup.ps1``` in Windows Powershell Administrator Mode
 * Update ```.env``` file
 
 d) MinIO Setup on Host Machine
 
-* Run ```powershell -ExecutionPolicy Bypass -File .\install-minio.ps1``` in Windows Powershell Administrator Mode
-* Run ```powershell -ExecutionPolicy Bypass -File .\start-minio.ps1``` in Windows Powershell Administrator Mode
+* Run ```powershell -ExecutionPolicy Bypass -File .\scripts\install-minio.ps1``` in Windows Powershell Administrator Mode
+* Run ```powershell -ExecutionPolicy Bypass -File .\scripts\start-minio.ps1``` in Windows Powershell Administrator Mode
 * Create bucket called ```radar-data``` using MinIO GUI
 
 ## Usage
