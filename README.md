@@ -15,30 +15,32 @@ Captured data is forwarded via UDP packets and stored in a .bin file using the b
 
 ## Installation
 
-Clone repository on host and client devices: 
+a) Clone repository on host and client devices: 
 ```git clone https://github.com/jayne-s/TI-mmWave-Python-Orchestrator.git```
 
-a) Client Setup
+b) Client Setup
 
-* Run ```pip install -r requirements.txt```
-* Update ```.env``` file
-
-  
 * Install [.NET 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+* Run ```pip install -r requirements.txt```
+
+
+
+* Update ```.env``` file
 * ```dotnet new console -n RadarRemote``` & add files in RadarRemote folder
 * Adjust IP Address in Program.cs & Adjust Path to upload_adc.py in radar_control.py
 
 
-b) Host Setup
+c) Host Setup
 
 * Run ```pip install -r requirements.txt```
-* Update ```.env``` file
+* Use Windows Defender Firewall to create Inbound Rules for Ports 22 (SSH) and 2777 (RSTD)
+* Create bucket called ```radar-data``` using [MinIO GUI](http://localhost:9001)
 
-  
+
+* Update ```.env``` file
 * Install [Docker Desktop for Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
 * Docker Commands: ```docker compose up -d``` and ```docker compose stop```
-* Create bucket called 'radar-data' using MinIO GUI (MinIO URL: ```http://localhost:9001```)
-* Use Windows Defender Firewall to create Inbound Rules for Ports 22 (SSH) and 2777 (RSTD)
+
 * Install OpenSSH Server via Windows PowerShell (Run as Admin):
   ```
   a) Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
