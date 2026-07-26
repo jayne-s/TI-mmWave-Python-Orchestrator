@@ -35,7 +35,7 @@ c) Host Setup
 * Run ```pip install -r requirements.txt```
 * Use Windows Defender Firewall to create Inbound Rules for Ports 22 (SSH) and 2777 (RSTD)
 * Create bucket called ```radar-data``` using [MinIO GUI](http://localhost:9001)
-
+* Run ```powershell -ExecutionPolicy Bypass -File .\setup-ssh.ps1```
 
 * Update ```.env``` file
 * Install [Docker Desktop for Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
