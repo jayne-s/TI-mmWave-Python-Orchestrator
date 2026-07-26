@@ -25,7 +25,7 @@ for machine in machines:
         )
 
         stdin, stdout, stderr = ssh.exec_command(
-            r"python C:\TI-mmWave-Python-Orchestrator\host\upload_adc.py"
+            'python C:\\TI-mmWave-Python-Orchestrator\\host\\upload_adc.py'
         )
 
         exit_status = stdout.channel.recv_exit_status()
