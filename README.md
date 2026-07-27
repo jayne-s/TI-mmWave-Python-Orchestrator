@@ -25,9 +25,6 @@ b) Client Setup
 * Update ```machines.json``` file
 * Update ```.env``` file
 
-
-* ```dotnet new console -n RadarRemote``` & add files in RadarRemote folder
-
 c) Host Setup
 
 * Run ```pip install -r requirements.txt```
