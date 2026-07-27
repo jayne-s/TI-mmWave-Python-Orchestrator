@@ -18,8 +18,8 @@ class Program {
         radar1.Connect();
         radar2.Connect();
       
-        using (var reader1 = new StreamReader("radar_commands.lua"))
-        using (var reader2 = new StreamReader("radar_commands.lua"))
+        using (var reader1 = new StreamReader("radar_commands_v2.lua"))
+        using (var reader2 = new StreamReader("radar_commands_v4.lua"))
         {
             string? line1;
             string? line2;
