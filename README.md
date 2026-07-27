@@ -22,12 +22,11 @@ b) Client Setup
 
 * Install [.NET 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 * Run ```pip install -r requirements.txt```
+* Update ```machines.json``` file
 
 
-
-* Update ```.env``` file
 * ```dotnet new console -n RadarRemote``` & add files in RadarRemote folder
-* Adjust IP Address in Program.cs & Adjust Path to upload_adc.py in radar_control.py
+* Adjust IP Addresses in Program.cs
 
 c) Host Setup
 
