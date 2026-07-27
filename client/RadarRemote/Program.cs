@@ -5,12 +5,35 @@ class Program {
     static void Main(string[] args) {
       
         var radar1 = new RadarController("XXX.XXX.X.XXX"); // replace with host IP
+        var radar2 = new RadarController("XXX.XXX.X.XXX"); // replace with host IP
+        
         radar1.Connect();
+        radar2.Connect();
       
-        foreach (string line in File.ReadLines("radar_commands.lua")) {
-            radar1.Execute(line);
+        using (var reader1 = new StreamReader("radar_commands.lua"))
+        using (var reader2 = new StreamReader("radar_commands.lua"))
+        {
+            string? line1;
+            string? line2;
+
+            while (!reader1.EndOfStream || !reader2.EndOfStream)
+            {
+                line1 = reader1.EndOfStream ? null : reader1.ReadLine();
+                line2 = reader2.EndOfStream ? null : reader2.ReadLine();
+
+                if (line1 != null)
+                {
+                    radar1.Execute(line1);
+                }
+
+                if (line2 != null)
+                {
+                    radar2.Execute(line2);
+                }
+            }
         }
         
         radar1.Disconnect();
+        radar2.Disconnect();
     }
 }
