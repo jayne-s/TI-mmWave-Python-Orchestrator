@@ -1,11 +1,19 @@
 using System;
+using System.IO;
+using DotNetEnv;
 using RtttNetClientAPI;
 
 class Program {
     static void Main(string[] args) {
-      
-        var radar1 = new RadarController("XXX.XXX.X.XXX"); // replace with host IP
-        var radar2 = new RadarController("XXX.XXX.X.XXX"); // replace with host IP
+
+        Env.Load();
+
+        string[] radarIps = Environment
+            .GetEnvironmentVariable("RADAR_IPS")!
+            .Split(',');
+
+        var radar1 = new RadarController(radarIps[0].Trim());
+        var radar2 = new RadarController(radarIps[1].Trim());
         
         radar1.Connect();
         radar2.Connect();
